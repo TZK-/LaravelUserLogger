@@ -1,0 +1,16 @@
+{
+    "name": "tzk/laravel-user-logger",
+    "type": "package",
+    "description": "A package injecting metadata about the logged user into the logs",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/support": "5.3.*|5.4.*|5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TZK\\UserLogger\\": "src"
+        }
+    },
+    "prefer-stable": true
+}
