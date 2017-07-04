@@ -8,12 +8,11 @@ use TZK\UserLogger\Events\SessionStarted;
 
 class StartSession extends BaseSession
 {
-
     protected function startSession(Request $request)
     {
         $session = parent::startSession($request);
         event(new SessionStarted(auth()->user()));
-        
+
         return $session;
     }
 }

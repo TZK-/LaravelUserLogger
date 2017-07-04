@@ -1,7 +1,7 @@
 <?php
 
 return [
-	/*
+    /*
     |--------------------------------------------------------------------------
     | User identifier
     |--------------------------------------------------------------------------
@@ -10,5 +10,5 @@ return [
     | By default, it takes the model primary key.
     */
 
-    'display_attribute' => 'id'
+    'display_attribute' => 'id',
 ];
