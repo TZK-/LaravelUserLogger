@@ -4,7 +4,6 @@ namespace TZK\UserLogger\Events;
 
 class SessionStarted
 {
-
     public $user;
 
     /**
@@ -16,5 +15,4 @@ class SessionStarted
     {
         $this->user = $user;
     }
-
 }

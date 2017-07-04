@@ -10,7 +10,6 @@ use TZK\UserLogger\Logger\UserProcessor;
 
 class UserLoggerServiceProvider extends ServiceProvider
 {
-
     /**
      * Perform post-registration booting of services.
      *
@@ -25,7 +24,6 @@ class UserLoggerServiceProvider extends ServiceProvider
         $this->pushUserProcessor();
     }
 
-
     /**
      * Register any package services.
      *
@@ -39,16 +37,16 @@ class UserLoggerServiceProvider extends ServiceProvider
     }
 
     /**
-     * Push the user processor into the Monolog instance
-     * 
+     * Push the user processor into the Monolog instance.
+     *
      * @return void
      */
-    private function pushUserProcessor() {
+    private function pushUserProcessor()
+    {
         // Since it is not possible to access sessions in a service provider
         // we listen for the session start to get the logged user.
         Event::listen(SessionStarted::class, function ($user) {
             Log::getMonolog()->pushProcessor(new UserProcessor($user));
         });
     }
-
 }
